@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Measuring Label</title>
+		<link
+			href="./styles.css"
+			rel="stylesheet" />
+		<link
+			href="./styles/label-85x58.css"
+			rel="stylesheet" />
+		<script src="./js/JsBarcode.all.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	<body>
+		<div class="page-container">
+			<table class="w-100">
+				<tbody>
+					<tr class="h-4rem">
+						<td class="center font-l">Machine: <span data-value="Machine"></span></td>
+					</tr>
+					<tr class="h-4rem">
+						<td class="center font-l">Series: <span data-value="Series"></span></td>
+					</tr>
+					<tr class="h-4rem">
+						<td class="center font-l">
+							<div
+								class="w-100"
+								style="display: flex; justify-content: space-around">
+								<div class="me-2">OP: <span data-value="OP"></span></div>
+								<div>Step: <span data-value="Step"></span></div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

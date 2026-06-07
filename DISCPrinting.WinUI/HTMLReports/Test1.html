@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Guidance Sheet - Bosch (A4)</title>
+    <script src="./js/JsBarcode.all.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            background: #eee; /* Màu nền để dễ phân biệt trang trên màn hình */
+        }
+
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto; /* Căn giữa trên màn hình */
+            border: 1px solid black;
+            padding: 10mm;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 2px 5px;
+            vertical-align: top;
+            /* Giảm kích thước font một chút để vừa vặn hơn */
+            font-size: 9.5px;
+        }
+
+        .no-border {
+            border: none;
+        }
+
+        .no-top-border {
+            border-top: none;
+        }
+
+        .no-bottom-border {
+            border-bottom: none;
+        }
+
+        .no-left-border {
+            border-left: none;
+        }
+
+        .no-right-border {
+            border-right: none;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .font-large {
+            font-size: 16px;
+        }
+
+        .font-xlarge {
+            font-size: 22px;
+        }
+
+        .font-xxlarge {
+            font-size: 34px;
+        }
+
+        .bosch-logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: red;
+            display: inline-block;
+            border: 2px solid red;
+            padding: 0 10px;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .circled-text {
+            border: 1px solid black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            font-weight: bold;
+            background-color: #eee;
+        }
+
+        .sticker-oval {
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sticker-rect {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .big-number-box {
+            border: 3px solid black;
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .barcode-container {
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        /* CSS for printing */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: none;
+                -webkit-print-color-adjust: exact; /* Đảm bảo in màu nền và màu chữ */
+                print-color-adjust: exact;
+            }
+
+            .container {
+                margin: 0;
+                border: none;
+                padding: 10mm; /* Giữ lại lề nội dung khi in */
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <table style="margin-bottom: 5px;">
+            <tr>
+                <td class="no-border" style="width: 35%;">Owner: HCP/MFET.TT Production Engineer</td>
+                <td class="no-border" style="width: 30%;"></td>
+                <td class="no-border text-right" style="width: 35%;">Date: 11-09-2025</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td class="text-center font-bold font-xlarge" style="letter-spacing: 2px;">260313A941</td>
+                <td class="text-center font-bold font-large">24_9 AVO 1.5</td>
+                <td class="text-center font-bold font-xlarge" style="transform: scaleX(-1);">260313A941</td>
+            </tr>
+        </table>
+
+        <!-- Main Info -->
+        <table>
+            <tr>
+                <!-- Left Side -->
+                <td style="width: 50%;" class="no-right-border">
+                    <table>
+                        <tr>
+                            <td style="width: 30%;">
+                                <div class="logo-container">
+                                    <span class="bosch-logo"><span class="circled-text" style="color:red; border-color:red;">H</span>BOSCH</span>
+                                </div>
+                                Managed By <br>
+                                <span class="font-bold">HCP/MSE1</span>
+                            </td>
+                            <td style="width: 70%;" class="text-center">
+                                <span class="font-bold font-large">Main Guidance Sheet</span><br>
+                                <span class="font-bold">HcP-001385-002</span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <!-- Right Side -->
+                <td style="width: 50%;" class="no-left-border">
+                    <table>
+                        <tr>
+                            <td>005</td>
+                            <td>Page 1 from 1</td>
+                        </tr>
+                        <tr>
+                            <td>Our reference <br><span class="font-bold">Pham Quang Phu</span></td>
+                            <td>Revision Date <br><span class="font-bold">11-09-2025</span></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Article and Batch Number -->
+        <table>
+            <tr>
+                <!-- Article Number Section -->
+                <td style="width: 50%; vertical-align: top;">
+                    Article number<br>
+                    <span class="font-bold font-xlarge">0320800410</span>
+                    <table style="margin-top: 10px;">
+                        <tr>
+                            <td class="text-center sticker-rect" style="width: 33%;">Blocked<br>Sticker</td>
+                            <td class="text-center sticker-oval" style="width: 33%;">Scrap-status<br>Sticker</td>
+                            <td class="no-border" style="width: 33%; vertical-align: bottom;">
+                                <table>
+                                    <tr>
+                                        <td colspan="3">QMM Confirm</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 30px;"></td>
+                                        <td>Status</td>
+                                        <td>Sign</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="margin-top: 10px;">
+                        <tr>
+                            <td>Article number Coil</td>
+                            <td colspan="2" class="font-bold">0320990997</td>
+                        </tr>
+                        <tr>
+                            <td>Melt Batch</td>
+                            <td>Glow Batch</td>
+                            <td>Ring no. coil</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">534494</td>
+                            <td class="font-bold">530</td>
+                            <td class="font-bold">4027</td>
+                        </tr>
+                        <tr>
+                            <td>Saddle height</td>
+                            <td colspan="2">Number of elements</td>
+                        </tr>
+                        <tr>
+                            <td style="height: 20px;"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>After fine blanking</td>
+                            <td colspan="2">after fineblanking</td>
+                        </tr>
+                        <tr>
+                            <td style="height: 20px;"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </table>
+                </td>
+                <!-- Batch Number Section -->
+                <td style="width: 50%; vertical-align: top;">
+                    Batch number
+                    <div class="barcode-container">
+                        <svg id="batch-barcode"></svg>
+                    </div>
+                    <table>
+                        <tr>
+                            <td class="no-border" style="width: 80%;">
+                                Production version<br>
+                                <span class="font-bold font-xxlarge">0006</span>
+                            </td>
+                            <td class="no-border text-center">
+                                <div class="big-number-box">1</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="text-align: center; margin-top: 20px;">
+                        Coil Batch <br>
+                        <span class="font-bold font-xlarge">534494/530</span><br>
+                        <span class="font-bold font-large" style="color: grey;">T0186</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Process Steps -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Process Step</th>
+                    <th>Process</th>
+                    <th>Machine no.</th>
+                    <th>Reject</th>
+                    <th>Date</th>
+                    <th>Reg. no.</th>
+                    <th>Number of boxes</th>
+                    <th>Burr</th>
+                    <th>Breakout</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SNG-020</td>
+                    <td>Fine blanking</td>
+                    <td>0830</td>
+                    <td></td>
+                    <td>13-02-26</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SNG-040</td>
+                    <td>Hardening</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Bottom Section -->
+        <table>
+            <tr>
+                <td style="width: 50%;">
+                    SNG-020 Fineblanking
+                    <div class="barcode-container">
+                        <svg id="article-barcode"></svg>
+                    </div>
+                </td>
+                <td style="width: 25%;">PO-ID</td>
+                <td style="width: 25%;">Run no.<br><span class="font-bold font-xxlarge">1st run</span></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    Comment
+                    <div style="height: 150px;"></div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Footer -->
+        <div class="text-center" style="margin-top: 5px;">
+            The valid version is published on Bosch Document System
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Batch Number Barcode
+            JsBarcode("#batch-barcode", "260313A941", {
+                format: "CODE128",
+                width: 2,
+                height: 50,
+                displayValue: true,
+                fontOptions: "bold",
+                fontSize: 14
+            });
+
+            // Article Number Barcode
+            JsBarcode("#article-barcode", "0320800410", {
+                format: "CODE128",
+                width: 2,
+                height: 50,
+                displayValue: true,
+                fontOptions: "bold",
+                fontSize: 14
+            });
+        });
+    </script>
+
+</body>
+</html>

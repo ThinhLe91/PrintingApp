@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Booking form</title>
+		<link
+			href="./styles.css"
+			rel="stylesheet" />
+		<link
+			href="./styles/a4-landscape.css"
+			rel="stylesheet" />
+		<script src="./js/JsBarcode.all.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	<body>
+		<div class="page-container">
+			<div style="display: flex; justify-content: space-between">
+				<span>Document no: <span data-value="No"></span></span>
+				<span>Version: <span data-value="Version"></span></span>
+			</div>
+			<div style="display: flex; justify-content: space-between">
+				<span>Owner: <span data-value="Owner"></span></span>
+				<span>Date: <span data-value="RevisionDate"></span></span>
+			</div>
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td
+							colspan="18"
+							class="bg-black white center bold font-l">
+							Booking form for SAP from production fineblanking
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-30 center"
+							colspan="6">
+							<img
+								src="./images/Bosch_Logo_3815x913.jpg"
+								width="150mm" />
+						</td>
+						<td
+							class="w-30 center font-xxl bold"
+							colspan="5"
+							rowspan="3">
+							DISC
+						</td>
+						<td
+							colspan="7"
+							class="w-40 center bold"
+							data-value="No"></td>
+					</tr>
+					<tr>
+						<td
+							class="center font-s"
+							colspan="6">
+							Managed by:
+						</td>
+						<td
+							class="center font-s"
+							colspan="3">
+							Our reference
+						</td>
+						<td class="center font-s">Ver.</td>
+						<td class="center font-s">Page</td>
+						<td
+							class="center font-s"
+							colspan="2">
+							Date
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="center font-s"
+							colspan="6"
+							data-value="ManagedBy"></td>
+						<td
+							class="center font-s"
+							colspan="3"
+							data-value="Reference"></td>
+						<td
+							class="center font-s"
+							data-value="Version"></td>
+						<td class="center font-s">1/1</td>
+						<td
+							class="center font-s"
+							data-value="RevisionDate"
+							colspan="2"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center bg-grey">
+							Article number
+						</td>
+						<td
+							colspan="5"
+							class="center bg-grey">
+							Machine number
+						</td>
+						<td
+							colspan="7"
+							class="center bg-grey">
+							Batch number
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center"
+							data-value="ArticleNumberCoil"></td>
+						<td
+							colspan="5"
+							class="center"
+							data-value="Machine"></td>
+						<td
+							colspan="7"
+							class="center"
+							data-value="BatchNumberFB"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="ArticleNumberCoil"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="ArticleNumberCoil"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="1"
+									jsbarcode-displayValue="false"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+						<td
+							colspan="5"
+							class="center">
+							Fineblanked <br />
+							DISCs
+						</td>
+						<td
+							colspan="7"
+							class="center">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="BatchNumberFB"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="BatchNumberFB"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="1"
+									jsbarcode-displayValue="false"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center bg-grey">
+							Production Version
+						</td>
+						<td
+							colspan="5"
+							class="center"
+							rowspan="3"></td>
+						<td
+							colspan="7"
+							class="center bg-grey"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center"
+							data-value="ProductionVersion"></td>
+						<td
+							colspan="7"
+							class="center"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center"></td>
+						<td
+							colspan="7"
+							class="center"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100">
+				<tbody>
+					<tr style="border-top: .5rem solid;">
+						<td class="center font-xl w-30">Ring numbers</td>
+						<td class="center w-17"></td>
+						<td
+							class="center font-s"
+							style="vertical-align: top">
+							2nd
+						</td>
+						<td
+							class="center font-s"
+							style="vertical-align: top">
+							3rd
+						</td>
+						<td
+							class="center font-s"
+							style="vertical-align: top">
+							4th
+						</td>
+					</tr>
+					<tr>
+						<td class="center bg-grey">Startup DISCs</td>
+						<td class="center bg-grey">Quantity</td>
+						<td
+							colspan="3"
+							rowspan="8"
+							style="vertical-align: top">
+							<div class="w-100" style="display: flex; justify-content: end;">
+								<table style="width: 90%; margin: -0.15rem -0.1rem 0 0;">
+									<tbody>
+										<tr style="border-top: none;">
+											<td
+												colspan="2"
+												class="center bold bg-grey">
+												Reject
+											</td>
+										</tr>
+										<tr class="h-5rem">
+											<td class="center" style="vertical-align: top;"><u>Reason</u></td>
+											<td class="center" style="vertical-align: top;"><u>Quantity</u></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+                            <div class="center bold" style="font-size: 5rem; line-height: 11rem;" data-value="BookingNo1"></div>
+						</td>
+					</tr>
+					<tr class="h-2-5rem">
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="center bg-grey">Measuring samples</td>
+						<td class="center bg-grey">Quantity</td>
+					</tr>
+					<tr class="h-2-5rem">
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="center bg-grey">Waste DISCs</td>
+						<td class="center bg-grey">Quantity</td>
+					</tr>
+					<tr class="h-2-5rem">
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="center bg-grey"></td>
+						<td class="center bg-grey"></td>
+					</tr>
+					<tr class="h-2-5rem">
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="h-1-5rem" style="border-top: .5rem solid;">
+                        <td colspan="5" class="p-2"><u>Comment:</u></td>
+                    </tr>
+                    <tr class="h-1-5rem">
+                        <td colspan="5"></td>
+                    </tr>
+                    <tr class="h-1-5rem">
+                        <td colspan="5"></td>
+                    </tr>
+                    <tr class="h-1-5rem">
+                        <td colspan="5"></td>
+                    </tr>
+				</tbody>
+			</table>
+			<div data-value="VersionNotice"
+				class="center"
+				style="position: absolute; bottom: 0; width: 100%; left: 0">
+				The valid version is published on Bosch Document System
+			</div>
+		</div>
+		<div class="page-container">
+			<div style="display: flex; justify-content: space-between">
+				<span>Document no: <span data-value="No"></span></span>
+				<span>Version: <span data-value="Version"></span></span>
+			</div>
+			<div style="display: flex; justify-content: space-between">
+				<span>Owner: <span data-value="Owner"></span></span>
+				<span>Date: <span data-value="RevisionDate"></span></span>
+			</div>
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td
+							colspan="18"
+							class="bg-black white center bold font-l">
+							Booking form for SAP from production fineblanking
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-30 center"
+							colspan="6">
+							<img
+								src="./images/Bosch_Logo_3815x913.jpg"
+								width="150mm" />
+						</td>
+						<td
+							class="w-30 center font-xxl bold"
+							colspan="5"
+							rowspan="3">
+							DISC
+						</td>
+						<td
+							colspan="7"
+							class="w-40 center bold"
+							data-value="No"></td>
+					</tr>
+					<tr>
+						<td
+							class="center font-s"
+							colspan="6">
+							Managed by:
+						</td>
+						<td
+							class="center font-s"
+							colspan="3">
+							Our reference
+						</td>
+						<td class="center font-s">Ver.</td>
+						<td class="center font-s">Page</td>
+						<td
+							class="center font-s"
+							colspan="2">
+							Date
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="center font-s"
+							colspan="6"
+							data-value="ManagedBy"></td>
+						<td
+							class="center font-s"
+							colspan="3"
+							data-value="Reference"></td>
+						<td
+							class="center font-s"
+							data-value="Version"></td>
+						<td class="center font-s">1/1</td>
+						<td
+							class="center font-s"
+							data-value="RevisionDate"
+							colspan="2"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center bg-grey">
+							Article number
+						</td>
+						<td
+							colspan="5"
+							class="center bg-grey">
+							Machine number
+						</td>
+						<td
+							colspan="7"
+							class="center bg-grey">
+							Batch number
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center"
+							data-value="ArticleNumberCoil"></td>
+						<td
+							colspan="5"
+							class="center"
+							data-value="Machine"></td>
+						<td
+							colspan="7"
+							class="center"
+							data-value="BatchNumberFB"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="ArticleNumberCoil"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="ArticleNumberCoil"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="1"
+									jsbarcode-displayValue="false"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+						<td
+							colspan="5"
+							class="center">
+							Fineblanked <br />
+							DISCs
+						</td>
+						<td
+							colspan="7"
+							class="center">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="BatchNumberFB"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="BatchNumberFB"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="1"
+									jsbarcode-displayValue="false"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center bg-grey">
+							Production Version
+						</td>
+						<td
+							colspan="5"
+							class="center"
+							rowspan="3"></td>
+						<td
+							colspan="7"
+							class="center bg-grey"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center"
+							data-value="ProductionVersion"></td>
+						<td
+							colspan="7"
+							class="center"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="center"></td>
+						<td
+							colspan="7"
+							class="center"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100">
+				<tbody>
+					<tr style="border-top: .5rem solid;">
+						<td class="center font-xl w-30">Ring numbers</td>
+						<td class="center w-17"></td>
+						<td
+							class="center font-s"
+							style="vertical-align: top">
+							2nd
+						</td>
+						<td
+							class="center font-s"
+							style="vertical-align: top">
+							3rd
+						</td>
+						<td
+							class="center font-s"
+							style="vertical-align: top">
+							4th
+						</td>
+					</tr>
+					<tr>
+						<td class="center bg-grey h-1-25rem">Startup DISCs</td>
+						<td class="center bg-grey h-1-25rem">Quantity</td>
+						<td
+							colspan="3"
+							rowspan="8"
+							style="vertical-align: top">
+							<div class="w-100" style="display: flex; justify-content: end;">
+								<table style="width: 90%; margin: -0.15rem -0.1rem 0 0;">
+									<tbody>
+										<tr style="border-top: none;">
+											<td
+												colspan="2"
+												class="center bold bg-grey">
+												Reject
+											</td>
+										</tr>
+										<tr class="h-5rem">
+											<td class="center" style="vertical-align: top;"><u>Reason</u></td>
+											<td class="center" style="vertical-align: top;"><u>Quantity</u></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+                            <div class="center bold" style="font-size: 5rem; line-height: 11rem;" data-value="BookingNo2"></div>
+						</td>
+					</tr>
+					<tr class="h-2-5rem">
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="center bg-grey">Measuring samples</td>
+						<td class="center bg-grey">Quantity</td>
+					</tr>
+					<tr class="h-2-5rem">
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="center bg-grey">Waste DISCs</td>
+						<td class="center bg-grey">Quantity</td>
+					</tr>
+					<tr class="h-2-5rem">
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="center bg-grey"></td>
+						<td class="center bg-grey"></td>
+					</tr>
+					<tr class="h-2-5rem">
+						<td></td>
+						<td></td>
+					</tr>
+					<tr class="h-1-5rem" style="border-top: .5rem solid;">
+                        <td colspan="5" class="p-2"><u>Comment:</u></td>
+                    </tr>
+                    <tr class="h-1-5rem">
+                        <td colspan="5"></td>
+                    </tr>
+                    <tr class="h-1-5rem">
+                        <td colspan="5"></td>
+                    </tr>
+                    <tr class="h-1-5rem">
+                        <td colspan="5"></td>
+                    </tr>
+				</tbody>
+			</table>
+			<div data-value="VersionNotice"
+				class="center"
+				style="position: absolute; bottom: 0; width: 100%; left: 0">
+				The valid version is published on Bosch Document System
+			</div>
+		</div>
+	</body>
+</html>

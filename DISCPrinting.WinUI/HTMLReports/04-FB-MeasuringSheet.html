@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Measuring Sheet</title>
+		<link
+			href="./styles.css"
+			rel="stylesheet" />
+		<link
+			href="./styles/a4-portrait.css"
+			rel="stylesheet" />
+		<script src="./js/JsBarcode.all.min.js"></script>
+		<script src="./js/app.js"></script>
+		<script>
+			const measuringSheet = [
+				{
+					col1: 'td.class="h-2rem";value="Item"',
+					col2: 'td.class="center w-3rem";value="BC"',
+					col3: 'td.class="center w-3rem";value="4.2K"',
+					col4: 'td.class="center w-3rem";value="8.4K"',
+					col5: 'td.class="center w-3rem";value="12.6K"',
+					col6: 'td.class="center w-3rem";value="16.8K"',
+					col7: 'td.class="center w-3rem";value="20.0K"',
+					col8: 'td.class="center w-3rem";value="EC"',
+					col9: 'td.class="center w-3rem";value="CW"',
+					col10: 'td.class="center w-3rem";value="CW"',
+					col11: 'td.class="center w-3rem";value="CW"',
+					col12: 'td.class="center w-3rem";value="CW"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="Visual inspection"',
+					col2: 'td.class="center"',
+					col3: 'td.class="center"',
+					col4: 'td.class="center"',
+					col5: 'td.class="center"',
+					col6: 'td.class="center"',
+					col7: 'td.class="center bg-grey"',
+					col8: 'td.class="center"',
+					col9: 'td.class="center bg-grey"',
+					col10: 'td.class="center bg-grey"',
+					col11: 'td.class="center bg-grey"',
+					col12: 'td.class="center bg-grey"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="PMA"',
+					col2: 'td.class="center"',
+					col3: 'td.class="center bg-grey"',
+					col4: 'td.class="center"',
+					col5: 'td.class="center bg-grey"',
+					col6: 'td.class="center bg-grey"',
+					col7: 'td.class="center"',
+					col8: 'td.class="center bg-grey"',
+					col9: 'td.class="center bg-grey"',
+					col10: 'td.class="center bg-grey"',
+					col11: 'td.class="center bg-grey"',
+					col12: 'td.class="center bg-grey"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="3D"',
+					col2: 'td.class="center"',
+					col3: 'td.class="center bg-grey"',
+					col4: 'td.class="center bg-grey"',
+					col5: 'td.class="center bg-grey"',
+					col6: 'td.class="center bg-grey"',
+					col7: 'td.class="center bg-grey"',
+					col8: 'td.class="center bg-grey"',
+					col9: 'td.class="center bg-grey"',
+					col10: 'td.class="center bg-grey"',
+					col11: 'td.class="center bg-grey"',
+					col12: 'td.class="center bg-grey"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="Saddle height"',
+					col2: 'td.class="center"',
+					col3: 'td.class="center bg-grey"',
+					col4: 'td.class="center bg-grey"',
+					col5: 'td.class="center bg-grey"',
+					col6: 'td.class="center bg-grey"',
+					col7: 'td.class="center"',
+					col8: 'td.class="center bg-grey"',
+					col9: 'td.class="center bg-grey"',
+					col10: 'td.class="center bg-grey"',
+					col11: 'td.class="center bg-grey"',
+					col12: 'td.class="center bg-grey"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="Step position"',
+					col2: 'td.class="center"',
+					col3: 'td.class="center bg-grey"',
+					col4: 'td.class="center bg-grey"',
+					col5: 'td.class="center bg-grey"',
+					col6: 'td.class="center bg-grey"',
+					col7: 'td.class="center bg-grey"',
+					col8: 'td.class="center bg-grey"',
+					col9: 'td.class="center"',
+					col10: 'td.class="center"',
+					col11: 'td.class="center"',
+					col12: 'td.class="center"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="Saddle contour"',
+					col2: 'td.class="center bg-grey"',
+					col3: 'td.class="center bg-grey"',
+					col4: 'td.class="center bg-grey"',
+					col5: 'td.class="center bg-grey"',
+					col6: 'td.class="center bg-grey"',
+					col7: 'td.class="center bg-grey"',
+					col8: 'td.class="center"',
+					col9: 'td.class="center bg-grey"',
+					col10: 'td.class="center bg-grey"',
+					col11: 'td.class="center bg-grey"',
+					col12: 'td.class="center bg-grey"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="Roughness"',
+					col2: 'td.class="center bg-grey"',
+					col3: 'td.class="center"',
+					col4: 'td.class="center bg-grey"',
+					col5: 'td.class="center bg-grey"',
+					col6: 'td.class="center bg-grey"',
+					col7: 'td.class="center bg-grey"',
+					col8: 'td.class="center"',
+					col9: 'td.class="center bg-grey"',
+					col10: 'td.class="center bg-grey"',
+					col11: 'td.class="center bg-grey"',
+					col12: 'td.class="center bg-grey"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="Interception point"',
+					col2: 'td.class="center"',
+					col3: 'td.class="center bg-grey"',
+					col4: 'td.class="center bg-grey"',
+					col5: 'td.class="center bg-grey"',
+					col6: 'td.class="center bg-grey"',
+					col7: 'td.class="center"',
+					col8: 'td.class="center bg-grey"',
+					col9: 'td.class="center bg-grey"',
+					col10: 'td.class="center bg-grey"',
+					col11: 'td.class="center bg-grey"',
+					col12: 'td.class="center bg-grey"'
+				},
+				{
+					col1: 'td.class="center bold h-2rem";value="Corrosion check"',
+					col2: 'td.class="center"',
+					col3: 'td.class="center"',
+					col4: 'td.class="center"',
+					col5: 'td.class="center"',
+					col6: 'td.class="center"',
+					col7: 'td.class="center bg-grey"',
+					col8: 'td.class="center"',
+					col9: 'td.class="center bg-grey"',
+					col10: 'td.class="center bg-grey"',
+					col11: 'td.class="center bg-grey"',
+					col12: 'td.class="center bg-grey"'
+				}
+			];
+			
+			document.addEventListener('DOMContentLoaded', () => {
+				generateDynamicTable(measuringSheet, 'measuring-sheet', {
+					className: 'w-100',
+					showHeader: false
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="page-container">
+			<div style="display: flex; justify-content: space-between">
+				<span>Document no: <span data-value="No"></span></span>
+				<span>Version: <span data-value="Version"></span></span>
+			</div>
+			<div style="display: flex; justify-content: space-between">
+				<span>Owner: <span data-value="Owner"></span></span>
+				<span>Date: <span data-value="RevisionDate"></span></span>
+			</div>
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td
+							colspan="6"
+							class="center font-xxl bold">
+							Measuring sheet fineblanking X
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="center w-10"
+							rowspan="2">
+							<img
+								src="./images/Bosch_Logo_3815x913.jpg"
+								width="180mm" />
+						</td>
+						<td class="center">Managed by:</td>
+						<td class="center">Date:</td>
+						<td class="center">Our reference:</td>
+						<td
+							data-value="No"
+							class="center w-17 bold"
+							rowspan="2"></td>
+						<td class="center">Page 1 from 2</td>
+					</tr>
+					<tr>
+						<td
+							class="center"
+							data-value="ManagedBy"></td>
+						<td
+							class="center"
+							data-value="RevisionDate"></td>
+						<td
+							class="center"
+							data-value="Reference"></td>
+						<td
+							class="center"
+							data-value="Version"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="2"
+							class="center bg-grey b-r-none">
+							Article number
+						</td>
+						<td
+							colspan="2"
+							class="center bg-grey b-l-none b-r-none">
+							Machine number
+						</td>
+						<td
+							colspan="2"
+							class="center bg-grey b-l-none">
+							Batch number
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="2"
+							class="center font-l bold"
+							data-value="ArticleNumberCoil"></td>
+						<td
+							colspan="2"
+							class="center font-l bold"
+							data-value="Machine"></td>
+						<td
+							colspan="2"
+							class="center font-l bold"
+							data-value="BatchNumberFB"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100 mt-1">
+				<tbody>
+					<tr>
+						<td class="center w-25">Fineblanking (SNG-020)</td>
+						<td
+							colspan="3"
+							class="center">
+							Enter your registration code when measurements are performed and correct
+						</td>
+					</tr>
+
+					<tr >
+						<td
+							colspan="4"
+							class="center"
+							style="vertical-align: top">
+							<div id="measuring-sheet"></div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="2"
+							class="">
+							All samples were performed and are correct
+						</td>
+						<td class="center w-10">Reg. no.</td>
+						<td class="center w-10"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100 mt-2">
+				<tbody>
+					<tr class="h-2rem">
+						<td
+							class="center bold w-10"
+							rowspan="2"
+							data-value="TrackNo"
+							style="font-size: 3rem"></td>
+						<td class="center font-xl bold">Comments</td>
+					</tr>
+					<tr class="h-2rem">
+						<td></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2"></td>
+					</tr>
+				</tbody>
+			</table>
+			<div data-value="VersionNotice"
+				class="center"
+				style="position: absolute; bottom: 0; width: 100%; left: 0">
+				The valid version is published on Bosch Document System
+			</div>
+		</div>
+		<div class="page-container">
+			<div style="display: flex; justify-content: space-between">
+				<span>Document no: <span data-value="No"></span></span>
+				<span>Version: <span data-value="Version"></span></span>
+			</div>
+			<div style="display: flex; justify-content: space-between">
+				<span>Owner: <span data-value="Owner"></span></span>
+				<span>Date: <span data-value="RevisionDate"></span></span>
+			</div>
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td
+							colspan="6"
+							class="center font-xxl bold">
+							Measuring sheet fineblanking
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="center w-10"
+							rowspan="2">
+							<img
+								src="./images/Bosch_Logo_3815x913.jpg"
+								width="180mm" />
+						</td>
+						<td class="center">Managed by:</td>
+						<td class="center">Date:</td>
+						<td class="center">Our reference:</td>
+						<td
+							data-value="No"
+							class="center w-17 bold"
+							rowspan="2"></td>
+						<td class="center">Page 2 from 2</td>
+					</tr>
+					<tr>
+						<td
+							class="center"
+							data-value="ManagedBy"></td>
+						<td
+							class="center"
+							data-value="RevisionDate"></td>
+						<td
+							class="center"
+							data-value="Reference"></td>
+						<td class="center"
+							data-value="Version"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="2"
+							class="center bg-grey b-r-none">
+							Article number
+						</td>
+						<td
+							colspan="2"
+							class="center bg-grey b-l-none b-r-none">
+							Machine number
+						</td>
+						<td
+							colspan="2"
+							class="center bg-grey b-l-none">
+							Batch number
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="2"
+							class="center font-l bold"
+							data-value="ArticleNumberCoil"></td>
+						<td
+							colspan="2"
+							class="center font-l bold"
+							data-value="Machine"></td>
+						<td
+							colspan="2"
+							class="center font-l bold"
+							data-value="BatchNumberFB"></td>
+					</tr>
+					<tr style="height: 23rem">
+						<td
+							class="b-r-none"
+							colspan="2"
+							style="vertical-align: top">
+							<table style="width: 90%; margin: -0.1rem 0 0 -0.15rem">
+								<tr>
+									<td class="center bg-grey">Article number + production version</td>
+								</tr>
+								<tr>
+									<td class="center py-1">
+										<div class="center">
+											<svg
+												class="barcode"
+												data-value="ArticleNumberVersion"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="ArticleNumberVersion"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="1"
+												jsbarcode-fontoptions="bold"></svg>
+										</div>
+									</td>
+								</tr>
+								<tr style="height: 5rem">
+									<td
+										class="center b-r-none"
+										style="vertical-align: bottom; padding-bottom: 0">
+										<span
+											style="font-size: 3rem; padding: 0.25rem 1rem 0 1rem; border: 1px solid"
+											data-value="TrackNo"></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="center bg-grey">Track + Machine + SMS</td>
+								</tr>
+								<tr>
+									<td class="center py-1">
+										<div class="center">
+											<svg
+												class="barcode"
+												data-value="TrackMachineToolID"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="TrackMachineToolID"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="1"
+												jsbarcode-fontoptions="bold"></svg>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td style="vertical-align: top;"
+							class="b-l-none"
+							colspan="4">
+							<table class="w-100">
+								<tr>
+									<td class="center bold w-20 font-xxxl">BC</td>
+									<td class="center">
+										<svg
+												class="barcode"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="260327A964BC"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="2"
+												jsbarcode-fontoptions="bold"></svg>
+									</td>
+								</tr>
+								<tr class="h-3rem">
+									<td class="center b-l-none b-r-none">Step location value:</td>
+									<td class="right b-l-none b-r-none font-l">
+										Burr value(L6)<br/>
+										........................
+									</td>
+								</tr>
+								<tr>
+									<td class="center bold font-xxxl">4200</td>
+									<td class="center">
+										<svg
+												class="barcode"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="260327A9644200"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="2"
+												jsbarcode-fontoptions="bold"></svg>
+									</td>
+								</tr>
+								<tr class="h-3rem">
+									<td class="center b-l-none b-r-none"></td>
+									<td class="right b-l-none b-r-none font-l">
+										Burr value(L6)<br/>
+										........................
+									</td>
+								</tr>
+								<tr>
+									<td class="center bold font-xxxl">8400</td>
+									<td class="center">
+										<svg
+												class="barcode"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="260327A9648400"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="2"
+												jsbarcode-fontoptions="bold"></svg>
+									</td>
+								</tr>
+								<tr class="h-3rem">
+									<td class="center b-l-none b-r-none"></td>
+									<td class="right b-l-none b-r-none font-l">
+										Burr value(L6)<br/>
+										........................
+									</td>
+								</tr>
+								<tr>
+									<td class="center bold font-xxxl">12600</td>
+									<td class="center">
+										<svg
+												class="barcode"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="260327A96412600"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="2"
+												jsbarcode-fontoptions="bold"></svg>
+									</td>
+								</tr>
+								<tr class="h-3rem">
+									<td class="center b-l-none b-r-none"></td>
+									<td class="right b-l-none b-r-none font-l">
+										Burr value(L6)<br/>
+										........................
+									</td>
+								</tr>
+								<tr>
+									<td class="center bold font-xxxl">16800</td>
+									<td class="center">
+										<svg
+												class="barcode"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="260327A96416800"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="2"
+												jsbarcode-fontoptions="bold"></svg>
+									</td>
+								</tr>
+								<tr class="h-3rem">
+									<td class="center b-l-none b-r-none"></td>
+									<td class="right b-l-none b-r-none font-l">
+										Burr value(L6)<br/>
+										........................
+									</td>
+								</tr>
+								<tr>
+									<td class="center bold font-xxxl">20000</td>
+									<td class="center">
+										<svg
+												class="barcode"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="260327A96420000"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="2"
+												jsbarcode-fontoptions="bold"></svg>
+									</td>
+								</tr>
+								<tr class="h-3rem">
+									<td class="center b-l-none b-r-none"></td>
+									<td class="right b-l-none b-r-none font-l">
+										Burr value(L6)<br/>
+										........................
+									</td>
+								</tr>
+								<tr>
+									<td class="center bold font-xxxl">EC</td>
+									<td class="center">
+										<svg
+												class="barcode"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="260327A964EC"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="2"
+												jsbarcode-fontoptions="bold"></svg>
+									</td>
+								</tr>
+								<tr class="h-3rem">
+									<td class="center b-l-none b-r-none"></td>
+									<td class="right b-l-none b-r-none font-l">
+										Burr value(L6)<br/>
+										........................
+									</td>
+								</tr>
+								<tr>
+									<td class="center bold font-xxxl">CW</td>
+									<td class="center">
+										<svg
+												class="barcode"
+												jsbarcode-format="CODE128"
+												jsbarcode-value="260327A964CW"
+												jsbarcode-textmargin="0"
+												jsbarcode-height="20"
+												jsbarcode-width="2"
+												jsbarcode-fontoptions="bold"></svg>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="right font-l" style="line-height: 4rem; ">Step location value (L6):......../......../......../........</div>
+			
+			<div data-value="VersionNotice"
+				class="center"
+				style="position: absolute; bottom: 0; width: 100%; left: 0">
+				The valid version is published on Bosch Document System
+			</div>
+		</div>
+	</body>
+</html>

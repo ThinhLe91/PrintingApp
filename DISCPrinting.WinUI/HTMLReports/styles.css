@@ -1,0 +1,141 @@
+@import url('./styles/sizing.css');
+@import url('./styles/spacing.css');
+
+
+table {
+    border-collapse: collapse;
+}
+
+table td, th {
+    border: 1px solid black;
+    /* padding: 0; */
+}
+
+table tr {
+    height: 1.5rem;
+}
+
+p {
+    margin: 0.25rem 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.title1 {
+    font-size: 30pt;
+    font-weight: bolder;
+}
+
+.title2 {
+    font-size: 19pt;
+    font-weight: bolder;
+}
+
+.title3 {
+    font-size: 16pt;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.b-l-none {
+    border-left: none;
+}
+
+.b-l-bold {
+    border-left: 2px solid black;
+}
+
+.b-r-none {
+    border-right: none;
+}
+
+.b-r-bold {
+    border-right: 2px solid black;
+}
+
+.b-t-bold {
+    border-top: 2px solid black;
+}
+
+.b-t-none {
+    border-top: none;
+}
+
+.b-b-bold {
+    border-bottom: 2px solid black;
+}
+
+.b-a-bold {
+    border: 2px solid black;
+}
+
+.b-a-none {
+    border: none;
+}
+
+.b-y-bold {
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.b-x-none {
+    border-left: none;
+    border-right: none;
+}
+
+
+.bg-grey {
+    background-color: rgb(175, 170, 170);
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.white {
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+.no-print {
+    display: none;
+}
+
+.auto-diagonal {
+    /* border: 1px solid #333; */
+    /* width: 150px;
+    height: 80px; */
+    background: linear-gradient(to top right,
+            transparent 49.5%,
+            #333 49.5%,
+            #333 50.5%,
+            transparent 50.5%);
+}
+
+.auto-diagonal-reverse {
+    background: linear-gradient(to bottom right,
+            transparent 49.5%,
+            #333 49.5%,
+            #333 50.5%,
+            transparent 50.5%);
+}

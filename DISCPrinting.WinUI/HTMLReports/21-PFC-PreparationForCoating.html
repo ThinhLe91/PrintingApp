@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Preparation For Coating</title>
+		<link
+			href="./styles.css"
+			rel="stylesheet" />
+		<link
+			href="./styles/a4-portrait.css"
+			rel="stylesheet" />
+		<script src="./js/JsBarcode.all.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	<body>
+		<div class="page-container">
+			<table class="w-100">
+				<tr class="h-4rem">
+					<td
+						colspan="2"
+						class="center bg-grey bold font-xxl">
+						Nhãn trên thùng trước xi mạ
+					</td>
+				</tr>
+				<tr class="h-4rem">
+					<td class="center w-50 bold font-xxl">Material No.</td>
+					<td class="center w-50 bold font-xxl">Material Barcode</td>
+				</tr>
+				<tr class="h-4rem">
+					<td
+						class="center w-50 bold font-xxl"
+						data-value="MaterialNo"></td>
+					<td class="center w-50">
+						<div class="center">
+							<svg
+								class="barcode"
+								data-value="MaterialNo"
+								jsbarcode-format="CODE128"
+								jsbarcode-value="MaterialNo"
+								jsbarcode-textmargin="0"
+								jsbarcode-height="60"
+								jsbarcode-width="2"
+								jsbarcode-fontoptions="bold"
+								jsbarcode-displayvalue="false"></svg>
+						</div>
+					</td>
+				</tr>
+				<tr class="h-4rem">
+					<td class="center w-50 bold font-xxl">Charge number</td>
+					<td class="center w-50 bold font-xxl">Charge Barcode</td>
+				</tr>
+				<tr class="h-4rem">
+					<td
+						class="center w-50 bold font-xxl"
+						data-value="BatchId"></td>
+					<td class="center w-50">
+						<div class="center">
+							<svg
+								class="barcode"
+								data-value="BatchId"
+								jsbarcode-format="CODE128"
+								jsbarcode-value="BatchId"
+								jsbarcode-textmargin="0"
+								jsbarcode-height="60"
+								jsbarcode-width="2"
+								jsbarcode-fontoptions="bold"
+								jsbarcode-displayvalue="false"></svg>
+						</div>
+					</td>
+				</tr>
+				<tr class="h-4rem">
+					<td class="center w-50 bold font-xxl">Packing Date</td>
+					<td class="center w-50 bold font-xxl">Số lượng Disc Good</td>
+				</tr>
+				<tr class="h-4rem">
+					<td class="center w-50 bold font-xxl" data-value="Date"></td>
+					<td class="center w-50 bold font-xxl" data-value="Quantity"></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link
+			href="./styles.css"
+			rel="stylesheet" />
+		<link href="./styles/a4-portrait.css" rel="stylesheet" />
+		<script src="./js/JsBarcode.all.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	<body>
+		<div class="page-container">
+			<div style="display: flex; justify-content: space-between">
+				<span>Document no: <span data-value="No"></span></span>
+				<span>Version: <span data-value="Version"></span></span>
+			</div>
+			<div style="display: flex; justify-content: space-between">
+				<span>Owner: <span data-value="Owner"></span></span>
+				<span>Date: <span data-value="RevisionDate"></span></span>
+			</div>
+
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td
+							colspan="12"
+							class="w-33 b-l-bold b-r-none b-t-bold b-b-bold">
+							<div
+								class="center title1"
+								data-value="BatchNumberFB"></div>
+						</td>
+						<td
+							class="w-33 b-x-none b-t-bold b-b-bold"
+							colspan="12">
+							<div class="center bold font-xxxl">DISC</div>
+						</td>
+						<td
+							class="w-33 b-l-none b-r-bold b-t-bold b-b-bold"
+							colspan="12">
+							<div
+								class="center title1 rotate-180"
+								data-value="BatchNumberFB"></div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-33 center"
+							colspan="12"
+							rowspan="2">
+							<img
+								src="./images/Bosch_Logo_3815x913.jpg"
+								width="180mm" />
+						</td>
+						<td
+							class="w-33"
+							colspan="12"
+							rowspan="2">
+							<div class="center bold font-xl">Main Guidance Sheet</div>
+						</td>
+						<td
+							class="w-33"
+							style="height: 1.4rem"
+							colspan="12"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="6"
+							class="w-17"></td>
+						<td
+							colspan="6"
+							class="w-17 center">
+							Page 1 from 2
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="12"
+							class="w-33">
+							<div class="center">Managed By</div>
+						</td>
+						<td
+							class="w-33 bg-grey"
+							rowspan="2"
+							colspan="12"
+							style="align-content: start">
+							<div
+								class="center bold"
+								data-value="No"></div>
+						</td>
+						<td
+							colspan="6"
+							class="w-17">
+							<div class="center">Our reference</div>
+						</td>
+						<td
+							colspan="6"
+							class="w-17">
+							<div class="center">Revision Date</div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-33"
+							colspan="12">
+							<div
+								class="center"
+								data-value="ManagedBy"></div>
+						</td>
+						<td
+							colspan="6"
+							class="w-17">
+							<div
+								class="center"
+								data-value="Reference"></div>
+						</td>
+						<td
+							colspan="6"
+							class="w-17">
+							<div
+								class="center"
+								data-value="RevisionDate"></div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-50 bg-grey center"
+							colspan="18">
+							Article number for Fine blanking
+						</td>
+						<td
+							class="w-50 bg-grey center"
+							colspan="18">
+							Batch number for Fine Blanking
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-50"
+							colspan="18"
+							rowspan="2">
+							<div
+								class="center title2"
+								data-value="ArticleNumberFB"></div>
+						</td>
+						<td
+							class="w-50"
+							colspan="18"
+							rowspan="3">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="BatchNumberFB"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="BatchNumberFB"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="2"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td
+							class="w-20"
+							colspan="3"
+							rowspan="5">
+							<span
+								style="
+									border: 1px dashed;
+									border-radius: 50%;
+									display: flex;
+									width: 6rem;
+									height: 6rem;
+									margin: 0.25rem auto;
+									text-align: center;
+									align-items: center;
+								"
+								>Blocked sticker</span
+							>
+						</td>
+						<td
+							class="w-30"
+							colspan="15"
+							rowspan="3">
+							<span
+								style="
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									border: 1px dashed;
+									border-radius: 50%;
+									margin: 0.25rem;
+									padding: 1rem;
+									text-align: center;
+								"
+								>Scrap - status <br />
+								sticker</span
+							>
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="center"
+							style="vertical-align: top"
+							colspan="18"
+							rowspan="9">
+							<div>
+								<p class="font-l">Production version</p>
+								<p data-value="ProductionVersion"></p>
+								<div style="line-height: 6rem; text-align: right">
+									<span
+										data-value="TrackNo"
+										style="border: 2px solid; padding: 1rem 0.5rem; margin-right: 2rem; font-size: 2rem; font-weight: bolder"
+										>$T$</span
+									>
+								</div>
+								<p class="font-l">Coil batch</p>
+								<p
+									data-value="CoilBatch"
+									style="border: 1px solid grey; width: 50%; margin: 0.25rem auto; padding: 0.25rem"></p>
+							</div>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td
+							colspan="5"
+							class="w-10 center">
+							QMM
+						</td>
+						<td
+							colspan="5"
+							class="w-10 center bg-grey">
+							Status
+						</td>
+						<td
+							colspan="5"
+							class="w-10 center bg-grey">
+							Sign
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="5"
+							class="w-10 center">
+							Confirm
+						</td>
+						<td
+							colspan="5"
+							class="w-10"></td>
+						<td
+							colspan="5"
+							class="w-10"></td>
+					</tr>
+					<tr>
+						<td
+							class="w-50 center bg-grey"
+							colspan="7">
+							Article number Coil
+						</td>
+						<td data-value="ArticleNumberCoil"
+							class="w-50 center"
+							colspan="11">
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="3"
+							class="w-33 center bg-grey">
+							Melt batch
+						</td>
+						<td
+							colspan="8"
+							class="w-33 center bg-grey">
+							Rolling batch
+						</td>
+						<td
+							colspan="7"
+							class="w-33 center bg-grey">
+							Ring no. coil
+						</td>
+					</tr>
+					<tr>
+						<td data-value="MeltBatch"
+							colspan="3"
+							class="w-33 center">
+						</td>
+						<td data-value="RollingBatch"
+							colspan="8"
+							class="w-33 center">
+						</td>
+						<td data-value="RingNoCoil"
+							colspan="7"
+							class="w-33 center">
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="3"
+							class="w-33 center "></td>
+						<td
+							colspan="8"
+							rowspan="2"
+							class="w-33 center bg-grey">
+							Number of Discs
+						</td>
+						<td
+							colspan="7"
+							class="w-33 center "></td>
+					</tr>
+					<tr>
+						<td
+							colspan="3"
+							class="w-33 center "></td>
+						<td
+							colspan="7"
+							class="w-33 center "></td>
+					</tr>
+					<tr>
+						<td
+							colspan="3"
+							class="w-33 center "></td>
+						<td
+							colspan="8"
+							rowspan="2"
+							class="w-33 center"></td>
+						<td
+							colspan="7"
+							class="w-33 center "></td>
+						<td
+							colspan="18"
+							rowspan="2"
+							class=""
+							style="vertical-align: top">
+							<div style="display: flex; justify-content: center">
+								<span data-value="ToolId" style="background-color: black; color: white; padding: 0.25rem 1.5rem">$SmS$</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="3"
+							class="w-33 center "></td>
+						<td
+							colspan="7"
+							class="w-33 center "></td>
+					</tr>
+					<tr>
+						<td
+							colspan="12"
+							class="w-33 b-l-bold b-r-none b-t-bold b-b-bold">
+							<div
+								class="center title1"
+								data-value="BatchNumberDB"></div>
+						</td>
+						<td
+							class="w-33 b-x-none b-t-bold b-b-bold"
+							colspan="12">
+							<div class="center bold font-xxxl">DISC</div>
+						</td>
+						<td
+							class="w-33 b-l-none b-r-bold b-t-bold b-b-bold"
+							colspan="12">
+							<div
+								class="center title1 rotate-180"
+								data-value="BatchNumberDB"></div>
+						</td>
+					</tr>
+					<tr class="h-1-75rem">
+						<td
+							class="w-50 center bg-grey"
+							colspan="18">
+							Article number for Deburring
+						</td>
+						<td
+							class="w-50 center bg-grey"
+							colspan="18">
+							Batch number for Deburring
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="w-50"
+							colspan="18">
+							<div
+								class="center title2 py-1"
+								data-value="ArticleNumberDB"></div>
+						</td>
+						<td
+							class="w-50 py-1"
+							colspan="18"
+							rowspan="2">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="BatchNumberDB"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="BatchNumberDB"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="2"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="3"
+							rowspan="6"
+							class="center">
+							<span
+								style="
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									border: 1px dashed;
+									border-radius: 50%;
+									margin: 0.25rem auto;
+									width: 6rem;
+									height: 6rem;
+								"
+								>Reject-status <br />
+								sticker</span
+							>
+						</td>
+						<td
+							colspan="15"
+							rowspan="6"
+							class="center">
+							<span
+								style="
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									border: 1px dashed;
+									border-radius: 50%;
+									margin: 0.25rem;
+									padding: 1rem;
+								"
+								>Scrap / Rework status <br />
+								sticker</span
+							>
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="12"
+							class="center w-50 bg-yellow">
+							Deburring time
+						</td>
+						<td
+							colspan="6"
+							rowspan="5"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="12"
+							rowspan="4"
+							class="center w-50 py-1">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="DeburringTime"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="DeburringTime"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="1"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td class="center bg-grey w-10">Process step</td>
+						<td class="center bg-grey w-17">Process</td>
+						<td class="center bg-grey w-10">
+							Machine <br />
+							no.
+						</td>
+						<td class="center bg-grey">Reject</td>
+						<td class="center bg-grey">Date</td>
+						<td class="center bg-grey">Reg.no.</td>
+						<td class="center bg-grey w-10">
+							Number of<br />
+							boxes
+						</td>
+						<td class="center bg-grey">
+							Number of<br />
+							Disc
+						</td>
+						<td class="center bg-grey w-10">Burr width</td>
+					</tr>
+					<tr>
+						<td class="center">DIS-010</td>
+						<td class="center">Fine blanking</td>
+						<td class="center" data-value="Machine"></td>
+						<td class="center"></td>
+						<td class="center" data-value="BatchCreatedDate"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+					</tr>
+					<tr>
+						<td class="center">DIS-020</td>
+						<td class="center">Deburring</td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center auto-diagonal"></td>
+						<td class="center"></td>
+						<td class="center auto-diagonal"></td>
+					</tr>
+					<tr>
+						<td class="center">DIS-030</td>
+						<td class="center">Packing after DB</td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center auto-diagonal"></td>
+						<td class="center"></td>
+						<td class="center auto-diagonal"></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td class="bg-grey w-50 center">SNG-020 Fineblanking</td>
+						<td class="bg-grey w-50 center">Run no.</td>
+					</tr>
+					<tr class="h-2rem">
+						<td></td>
+						<td class="center font-xxxl">1e run</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100">
+				<tbody>
+					<tr class="h-2rem">
+						<td
+							rowspan="4"
+							class="w-25 p-1"
+							style="vertical-align: top">
+							Note:
+						</td>
+						<td class="center font-xxl">Comment for Fine blanking</td>
+					</tr>
+					<tr class="h-2rem">
+						<td></td>
+					</tr>
+					<tr class="h-2rem">
+						<td></td>
+					</tr>
+					<tr class="h-2rem">
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<div data-value="VersionNotice"
+				class="center"
+				style="position: absolute; bottom: 0; width: 100%; left: 0">
+				The valid version is published on Bosch Document System
+			</div>
+		</div>
+		<div class="page-container">
+			<div style="display: flex; justify-content: space-between">
+				<span>Document no: <span data-value="No"></span></span>
+				<span>Version: <span data-value="Version"></span></span>
+			</div>
+			<div style="display: flex; justify-content: space-between">
+				<span>Owner: <span data-value="Owner"></span></span>
+				<span>Date: <span data-value="RevisionDate"></span></span>
+			</div>
+
+			<table class="w-100">
+				
+				<tbody>
+					<tr class="h-2rem">
+						<td
+							colspan="6"
+							class="center font-xxl">
+							Comment for Deburring
+						</td>
+					</tr>
+					<tr class="h-2rem">
+						<td>Tub:</td>
+						<td colspan="2">Scrap:</td>
+						<td colspan="3">Ghi chú:</td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="6">Lý do mài lại lần 1:</td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="3">Thời gian mài lại:</td>
+						<td colspan="2">Ngày:</td>
+						<td class="w-30">Người thao tác:</td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="2">Máy:</td>
+						<td>Tub:</td>
+						<td colspan="2">Kết quả (số NOK/ Số mẫu):</td>
+						<td>Trưởng ca:</td>
+					</tr>
+					<tr class="h-2rem">
+						<td colspan="4"></td>
+						<td colspan="2" class="w-40">Print Date:</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div data-value="VersionNotice"
+				class="center"
+				style="position: absolute; bottom: 0; width: 100%; left: 0">
+				The valid version is published on Bosch Document System
+			</div>
+		</div>
+	</body>
+</html>

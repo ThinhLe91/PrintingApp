@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Storage Label</title>
+		<link
+			href="./styles.css"
+			rel="stylesheet" />
+		<link
+			href="./styles/label-85x58.css"
+			rel="stylesheet" />
+		<style>
+			.scale svg {
+				transform: scaleX(1.4) !important;
+			}
+		</style>
+		<script src="./js/JsBarcode.all.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	<body>
+		<div class="page-container">
+			<table class="w-100">
+				<tbody>
+					<tr class="h-1rem">
+						<td class="center bg-black white bold">VC <span data-value="Step"></span></td>
+					</tr>
+					<tr class="h-1rem">
+						<td class="center ">
+							<div style="display: flex; flex-direction: column">
+								<span class="bold">Article no. + Production version</span>
+								<div class="center scale">
+									<svg
+										class="barcode"
+										data-value="ArticleNumberVersion"
+										jsbarcode-format="CODE128"
+										jsbarcode-value="ArticleNumberVersion"
+										jsbarcode-textmargin="0"
+										jsbarcode-margin="0"
+										jsbarcode-height="25"
+										jsbarcode-width="1"
+										jsbarcode-fontoptions="bold"
+										jsbarcode-fontsize="15"
+										jsbarcode-displayvalue="false"
+										></svg>
+								</div>
+								<span class="bold" data-value="ArticleNumberVersion"></span>
+							</div>
+						</td>
+					</tr>
+					<tr class="h-1rem">
+						<td class="center ">
+							<div style="display: flex; flex-direction: column">
+								<span class="bold">Batch no. + Measuring</span>
+								<div class="center scale">
+									<svg
+										class="barcode"
+										data-value="BatchNoStep"
+										jsbarcode-format="CODE128"
+										jsbarcode-value="BatchNoStep"
+										jsbarcode-textmargin="0"
+										jsbarcode-margin="0"
+										jsbarcode-height="25"
+										jsbarcode-width="1"
+										jsbarcode-fontoptions="bold"
+										jsbarcode-displayvalue="false"
+										jsbarcode-fontsize="15"></svg>
+								</div>
+								<span class="bold" data-value="BatchNoStep"></span>
+							</div>
+						</td>
+					</tr>
+					<tr class="h-1rem">
+						<td class="center ">
+							<div style="display: flex; flex-direction: column">
+								<span class="bold">Track + Machine + SmS</span>
+								<div class="center scale">
+									<svg
+										class="barcode"
+										data-value="TrackMachineToolID"
+										jsbarcode-format="CODE128"
+										jsbarcode-value="TrackMachineToolID"
+										jsbarcode-textmargin="0"
+										jsbarcode-margin="0"
+										jsbarcode-height="25"
+										jsbarcode-width="1"
+										jsbarcode-fontoptions="bold"
+										jsbarcode-fontsize="15"
+										jsbarcode-displayvalue="false"
+										></svg>
+								</div>
+								<span class="bold" data-value="TrackMachineToolID"></span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

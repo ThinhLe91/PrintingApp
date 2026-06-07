@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>AOI Label</title>
+		<link
+			href="./styles.css"
+			rel="stylesheet" />
+		<link
+			href="./styles/label-85x58.css"
+			rel="stylesheet" />
+		<style>
+			.scale svg {
+				transform: scaleX(1.5) !important;
+			}
+		</style>
+		<script src="./js/JsBarcode.all.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	<body>
+		<div class="page-container">
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td colspan="2" class="center bold w-100">
+							<div style="display: flex; flex-direction: column; align-items: center;">
+								<span class="font-s">Part No (P): <span class="font-s" data-value="PartNo"></span></span>
+								<div class="center scale">
+									<svg
+										class="barcode"
+										data-value="PartNo"
+										jsbarcode-format="CODE128"
+										jsbarcode-value="PartNo"
+										jsbarcode-textmargin="0"
+										jsbarcode-margin="0"
+										jsbarcode-height="30"
+										jsbarcode-width="1"
+										jsbarcode-fontoptions="bold"
+										jsbarcode-fontsize="15"
+										jsbarcode-displayvalue="false"></svg>
+								</div>
+								
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="center bold">
+							<div>
+								<span class="font-s">Batch (H): <span class="font-s" data-value="BatchH"></span></span>
+								<div class="center scale">
+									<svg
+										class="barcode"
+										data-value="BatchH"
+										jsbarcode-format="CODE128"
+										jsbarcode-value="BatchH"
+										jsbarcode-textmargin="0"
+										jsbarcode-margin="0"
+										jsbarcode-height="30"
+										jsbarcode-width="1"
+										jsbarcode-fontoptions="bold"
+										jsbarcode-fontsize="15"
+										jsbarcode-displayvalue="false"></svg>
+								</div>
+								
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="center bold">
+							<div>
+								<span class="font-s">ID: <span class="font-s" data-value="DateBoxID"></span></span>
+								<div class="center">
+									<svg
+										class="barcode"
+										data-value="DateBoxID"
+										jsbarcode-format="CODE128"
+										jsbarcode-value="DateBoxID"
+										jsbarcode-textmargin="0"
+										jsbarcode-margin="0"
+										jsbarcode-height="30"
+										jsbarcode-width="1"
+										jsbarcode-fontoptions="bold"
+										jsbarcode-fontsize="15"
+										jsbarcode-displayvalue="false"></svg>
+								</div>
+								
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="center bold w-50">
+							<div style="display: flex; flex-direction: column;">
+								<span class="font-s">Quantity (Q): <span class="font-s" data-value="QuantityQ"></span></span>
+								<div class="center scale">
+									<svg
+										class="barcode"
+										data-value="QuantityQ"
+										jsbarcode-format="CODE128"
+										jsbarcode-value="QuantityQ"
+										jsbarcode-textmargin="0"
+										jsbarcode-margin="0"
+										jsbarcode-height="30"
+										jsbarcode-width="1"
+										jsbarcode-fontoptions="bold"
+										jsbarcode-fontsize="15"
+										jsbarcode-displayvalue="false"></svg>
+								</div>
+								
+							</div>
+						</td>
+						<td class="center bold">Date: <span data-value="Date"></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

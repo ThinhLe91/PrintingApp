@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Deburring - Booking form</title>
+		<link
+			href="./styles.css"
+			rel="stylesheet" />
+		<link
+			href="./styles/a5-portrait.css"
+			rel="stylesheet" />
+		<script src="./js/JsBarcode.all.min.js"></script>
+		<script src="./js/app.js"></script>
+	</head>
+	<body>
+		<div class="page-container">
+			<div style="display: flex; justify-content: space-between">
+				<span>Document no: <span data-value="No"></span></span>
+				<span>Version: <span data-value="Version"></span></span>
+			</div>
+			<div style="display: flex; justify-content: space-between">
+				<span>Owner: <span data-value="Owner"></span></span>
+				<span>Date: <span data-value="RevisionDate"></span></span>
+			</div>
+			<table class="w-100">
+				<tbody>
+					<tr>
+						<td
+							colspan="2"
+							class="w-33 center font-l bold"
+							data-value="BatchNumberDB"></td>
+						<td
+							colspan="2"
+							class="w-33 center font-l bold">
+							Booking form
+						</td>
+						<td
+							colspan="2"
+							class="w-33 center font-l bold rotate-180"
+							data-value="BatchNumberDB"></td>
+					</tr>
+					<tr class="h-1rem">
+						<td
+							colspan="2"
+							rowspan="2"
+							class="center">
+							<img
+								src="./images/Bosch_Logo_3815x913.jpg"
+								width="120mm" />
+						</td>
+						<td
+							colspan="2"
+							rowspan="3"
+							class="center font-xxl bold">
+							Disc ESP
+						</td>
+						<td
+							colspan="2"
+							class="center bg-grey font-s"
+							data-value="No"></td>
+					</tr>
+					<tr class="h-1rem">
+						<td class="center bg-grey font-s">Revision: 004</td>
+						<td class="center bg-grey font-s">Page: 1/1</td>
+					</tr>
+					<tr class="h-1rem">
+						<td
+							class="center bg-grey font-s"
+							colspan="2">
+							Managed by:
+						</td>
+						<td class="center bg-grey font-s">Process owner:</td>
+						<td class="center bg-grey font-s">Date:</td>
+					</tr>
+					<tr class="h-1rem">
+						<td
+							colspan="2"
+							class="center bg-grey font-s"
+							data-value="ManagedBy"></td>
+						<td
+							colspan="2"
+							class="center bg-grey font-s">
+							Appendix for HcP-00XXXX
+						</td>
+						<td
+							class="center bg-grey font-s"
+							data-value="ProcessOwner"></td>
+						<td
+							class="center bg-grey font-s"
+							data-value="RevisionDate"></td>
+					</tr>
+					<tr>
+						<td
+							colspan="3"
+							class="center bg-grey w-50">
+							Batch number
+						</td>
+						<td
+							colspan="3"
+							class="center bg-grey w-50">
+							Batch number
+						</td>
+					</tr>
+					<tr>
+						<td
+							colspan="3"
+							class="center w-50"
+							data-value="BatchNumberDB"></td>
+						<td
+							colspan="3"
+							class="center w-50"
+							rowspan="2">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="BatchNumberDB"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="BatchNumberDB"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="2"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td
+							rowspan="2"
+							class="w-20"></td>
+						<td
+							rowspan="2"
+							colspan="2"
+							class="w-30"></td>
+					</tr>
+					<tr style="height: 3rem">
+						<td colspan="3"></td>
+					</tr>
+					<tr>
+						<td
+							class="center bg-grey"
+							colspan="3">
+							Storage #: 21i
+						</td>
+						<td class="center bg-grey font-s">Number of disc</td>
+						<td
+							class="center bg-grey"
+							colspan="2">
+							Production version
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="center"
+							colspan="3">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="StorageNo"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="StorageNo"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="2"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+						<td class="center"></td>
+						<td
+							class="center"
+							colspan="2">
+							<div class="center">
+								<svg
+									class="barcode"
+									data-value="ProductionVersion"
+									jsbarcode-format="CODE128"
+									jsbarcode-value="ProductionVersion"
+									jsbarcode-textmargin="0"
+									jsbarcode-height="20"
+									jsbarcode-width="2"
+									jsbarcode-fontoptions="bold"></svg>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100">
+				<tbody>
+					<tr >
+						<td class="b-t-none center bold bg-grey font-xs">Process step</td>
+						<td class="b-t-none center bold bg-grey font-s">Process</td>
+						<td class="b-t-none center bold bg-grey font-xs">Machine no.</td>
+						<td class="b-t-none center bold bg-grey font-s">Reject</td>
+						<td class="b-t-none center bold bg-grey font-s">Date</td>
+						<td class="b-t-none center bold bg-grey font-xs">Reg. no.</td>
+						<td class="b-t-none center bold bg-grey font-xs">Measured by</td>
+						<td
+							class="b-t-none center bold bg-grey font-s w-25"
+							colspan="3">
+							Rework
+						</td>
+					</tr>
+					<tr>
+						<td
+							class="center font-s"
+							rowspan="2">
+							Disc-20
+						</td>
+						<td
+							class="center font-s"
+							rowspan="2">
+							Deburring
+						</td>
+						<td class="center bold">1572</td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td
+							class="center bg-grey"
+							rowspan="2"
+							colspan="3"></td>
+					</tr>
+					<tr>
+						<td class="center bg-grey font-s">Batch</td>
+						<td></td>
+						<td
+							class="center bg-grey font-s"
+							colspan="2">
+							Release code
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td
+							class="center font-s"
+							rowspan="2">
+							Disc-30
+						</td>
+						<td
+							class="center font-s"
+							rowspan="2">
+							Vibration
+						</td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center"></td>
+						<td class="center font-xs">Done by operator</td>
+						<td class="center font-xs">PSK release</td>
+						<td class="center font-xs">Booker registration</td>
+					</tr>
+					<tr>
+						<td class="center bg-grey font-s">Batch</td>
+						<td></td>
+						<td
+							class="center bg-grey font-s"
+							colspan="2">
+							Release code
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="w-100">
+				<tr class="h-1rem">
+					<td class="b-t-none center bold bg-grey w-50 font-s">DISC-020 Deburring</td>
+					<td class="b-t-none center bold bg-grey w-50 font-s">Order no</td>
+				</tr>
+				<tr class="h-1-25rem">
+					<td class="center">
+						<div class="center">
+							<svg
+								class="barcode"
+								data-value="ArticleNumberDB"
+								jsbarcode-format="CODE128"
+								jsbarcode-value="ArticleNumberDB"
+								jsbarcode-textmargin="0"
+								jsbarcode-height="20"
+								jsbarcode-width="2"
+								jsbarcode-fontoptions="bold"></svg>
+						</div>
+					</td>
+					<td class="center"></td>
+				</tr>
+			</table>
+			<table class="w-100">
+				<tr>
+					<td class="b-t-none center bold">Comment</td>
+					<td
+						class="b-t-none center w-25 bold"
+						rowspan="3"
+						style="vertical-align: top">
+						Booked by
+					</td>
+				</tr>
+				<tr class="h-1rem">
+					<td></td>
+				</tr>
+				<tr class="h-1rem">
+					<td></td>
+				</tr>
+				<tr class="h-1rem">
+					<td colspan="2"></td>
+				</tr>
+				<tr class="h-1rem">
+					<td colspan="2"></td>
+				</tr>
+				<tr class="h-1rem">
+					<td colspan="2"></td>
+				</tr>
+				<tr class="h-1rem">
+					<td colspan="2"></td>
+				</tr>
+			</table>
+			<table class="w-100">
+				<tr class="h-1rem">
+					<td class="b-t-none center w-50 bold bg-grey">Barcode for rejecting fineblanking Disc</td>
+					<td
+						class="b-t-none w-50"
+						colspan="2"></td>
+				</tr>
+				<tr class="h-1rem">
+					<td
+						class="center w-50"
+						rowspan="3">
+						<div class="center">
+							<svg
+								class="barcode"
+								data-value="ArticleNumberDB"
+								jsbarcode-format="CODE128"
+								jsbarcode-value="ArticleNumberDB"
+								jsbarcode-textmargin="0"
+								jsbarcode-height="20"
+								jsbarcode-width="2"
+								jsbarcode-fontoptions="bold"></svg>
+						</div>
+					</td>
+					<td
+						class="w-50"
+						colspan="2"></td>
+				</tr>
+				<tr class="h-1rem">
+					<td colspan="2"></td>
+				</tr>
+				<tr class="h-1rem">
+					<td class="right w-30 font-s">Print Date:</td>
+					<td
+						class="center font-s"
+						data-value="PrintedDate"></td>
+				</tr>
+			</table>
+			<div data-value="VersionNotice"
+				class="center"
+				style="position: absolute; bottom: 0; width: 100%; left: 0">
+				The valid version is published on Bosch Document System
+			</div>
+		</div>
+	</body>
+</html>

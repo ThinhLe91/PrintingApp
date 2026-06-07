@@ -1,0 +1,33 @@
+@page {
+    size: A5;
+    margin: 0;
+}
+
+.page-container {
+    width: 148mm;
+    min-height: 210mm;
+    padding: 10mm;
+    margin: auto;
+    background: white;
+    box-shadow: 0 0 5px red;
+    font-family: 'Bosch Office Sans';
+    font-size: 11pt;
+    position: relative;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .page-container {
+        width: 148mm;
+        min-height: 210mm;
+        box-shadow: none;
+        margin: 0;
+        padding: 3mm;
+    }
+}
